@@ -57,7 +57,8 @@ async function analyzeEmotion() {
     if (!model) {
         resultDiv.textContent = "Loading model. Please wait...";
         try {
-            model = await tf.loadLayersModel("models/model.json");
+            // Corrected path for model.json in the root directory
+            model = await tf.loadLayersModel("./model.json");
         } catch (error) {
             console.error("Error loading model:", error);
             resultDiv.textContent = "Failed to load model. Ensure model files are available.";
