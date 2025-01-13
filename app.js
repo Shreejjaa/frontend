@@ -90,7 +90,7 @@ async function analyzeEmotion() {
 // Fetch response from the Buddybot backend
 async function fetchBuddybotResponse(emotion, userMessage = "") {
     try {
-        const response = await fetch("http://127.0.0.1:5000/chatbot", {
+        const response = await fetch("http://backend-knjb.onrender.com/chatbot", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
