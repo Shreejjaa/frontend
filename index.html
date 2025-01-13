@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emotion Analyzer</title>
+    <script src="app.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">Vibe Bot</h1>
+        
+        <!-- Video stream -->
+        <div class="video-container">
+            <video id="webcam" autoplay playsinline class="video"></video>
+            <canvas id="snapshot" style="display: none;"></canvas>
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-container">
+            <button id="turnOnCameraButton" class="btn btn-primary">Turn On Camera</button>
+            <button id="turnOffCameraButton" class="btn btn-secondary">Turn Off Camera</button>
+            <button id="analyzeButton" class="btn btn-secondary">Analyze Emotion</button>
+        </div>
+
+        <!-- Results -->
+        <div class="feedback">
+            <p id="result" class="emotion-text">Your emotion will appear here!</p>
+        </div>
+
+        <!-- Chatbot -->
+       <!-- Chatbot Section -->
+<div id="chatbot" class="chat-container" style="display: none;">
+    <div id="chat-header" class="chat-header">Buddybot</div>
+    <div id="chat-messages" class="chat-messages"></div>
+    <div class="chat-input-container">
+        <input type="text" id="chat-input" class="chat-input" placeholder="Type your message..." />
+        <button id="chat-send" class="chat-send">Send</button>
+    </div>
+</div>
+
+    </div>
+</body>
+</html>
